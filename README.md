@@ -1,0 +1,5 @@
+# Animal database
+
+A searchable database containing detailed information on a vast collection of animal species. Explore taxonomy, characteristics, locations, and access Wikipedia data for further research. Dataset sourced from the [PenguinPush/animals-info](https://huggingface.co/datasets/PenguinPush/animals-info) dataset by "Andrew Dai" on Hugging Face. *Edited a few fields to make it more short.*
+
+Also included glossary: The taxonomic hierarchy is a system used to classify living organisms into ranked categories based on shared characteristics. This is a reference guide to taxonomic classifications and terms in animal biology. Click on any term to explore image and description. All the information is sourced from Wikipedia through their open API. If no specific information is available, some details may be missing. Occasionally, results may be unrelated due to similar names or limited information on Wikipedia. Also, please note, I'm not an expert in this field. This is just one of my side projects where I'm exploring different possibilities. I hope you find it useful.
