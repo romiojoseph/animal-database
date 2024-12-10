@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Database: Comprehensive Information on Species, Habitats & More</title>
+    <meta name="description"
+        content="A searchable database containing detailed information on a vast collection of animal species. Explore taxonomy, characteristics, locations, and access Wikipedia data for further research.">
+    <meta property="og:image" content="assets/social-image.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <meta property="og:title" content="Animal Database: Comprehensive Information on Species, Habitats & More">
+    <meta property="og:description"
+        content="A searchable database containing detailed information on a vast collection of animal species. Explore taxonomy, characteristics, locations, and access Wikipedia data for further research.">
+    <meta property="og:image" content="assets/social-image.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="header-wrapper">
+                <div class="header-content">
+                    <h1>Animal database</h1>
+                    <p>A searchable database containing detailed information on a vast collection of animal species.
+                        Explore taxonomy, characteristics, locations, and access Wikipedia data for further research.
+                        Dataset sourced from the "<a href="https://huggingface.co/datasets/PenguinPush/animals-info"
+                            target="_blank" rel="noopener noreferrer nofollow">PenguinPush/animals-info</a>" dataset by
+                        "Andrew Dai" on Hugging Face.
+                    </p>
+                </div>
+
+                <div class="header-actions">
+                    <nav>
+                        <a href="glossary.html" class="nav-link">
+                            <i class="ph-duotone ph-list-magnifying-glass"></i>
+                            View glossary
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <input type="text" id="search-input" placeholder="Search animals...">
+
+            <div class="filter-group">
+
+                <select id="filter-taxonomy-phylum" title="Filter by Phylum">
+                    <option value="">All Phyla</option>
+                </select>
+                <select id="filter-taxonomy-class" title="Filter by Class">
+                    <option value="">All Classes</option>
+                </select>
+
+                <select id="filter-taxonomy-order" title="Filter by Order">
+                    <option value="">All Orders</option>
+                </select>
+
+                <select id="filter-taxonomy-family" title="Filter by Family">
+                    <option value="">All Families</option>
+                </select>
+
+                <select id="filter-taxonomy-genus" title="Filter by Genus">
+                    <option value="">All Genera</option>
+                </select>
+
+                <select id="filter-diet" title="Filter by Diet">
+                    <option value="">All Dietary Types</option>
+                </select>
+
+                <select id="filter-group" title="Filter by Group">
+                    <option value="">All Groups</option>
+                </select>
+
+                <select id="filter-group-behavior" title="Filter by Group Behavior">
+                    <option value="">All Group Behaviors</option>
+                </select>
+
+                <select id="filter-lifestyle" title="Filter by Lifestyle">
+                    <option value="">All Lifestyles</option>
+                </select>
+
+                <select id="filter-location" title="Filter by Location">
+                    <option value="">All Locations</option>
+                </select>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <div id="cards-container" class="cards-grid loading">
+                <!-- Animal cards will be dynamically populated here -->
+            </div>
+        </main>
+
+        <!-- Modal for Animal Details -->
+        <div id="animal-modal" class="modal">
+            <div class="modal-content">
+                <div id="modal-content">
+                    <!-- Modal content will be dynamically populated -->
+                </div>
+            </div>
+        </div>
+
+        <footer>Dataset sourced from the "<a href="https://huggingface.co/datasets/PenguinPush/animals-info"
+                target="_blank" rel="noopener noreferrer nofollow">PenguinPush/animals-info</a>" dataset by
+            "Andrew Dai" on Hugging Face.All the extra information is sourced from Wikipedia through their open API. If
+            no
+            specific information is available, some details may be missing. Occasionally, results may be unrelated
+            due to similar names or limited information on Wikipedia. Also, please note, I'm not an expert in this
+            field. This is just one of my side projects where I'm exploring different possibilities. I hope you find
+            it useful. Checkout other projects on <a href="https://romiojoseph.github.io/open-source" target="_blank"
+                rel="noopener noreferrer nofollow">GitHub</a>.</footer>
+    </div>
+
+    <!-- Main Application Script -->
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

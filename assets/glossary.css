@@ -1,0 +1,117 @@
+@import url('styles.css');
+
+/* Glossary Section */
+.glossary-section {
+    background-color: var(--eclipse-0);
+    border-radius: 16px;
+    padding: 24px;
+    border: 2px solid var(--eclipse-2);
+    margin-bottom: 24px;
+}
+
+#glossary-container {
+    margin: 24px auto;
+}
+
+.subtitle {
+    margin-bottom: 24px !important;
+    margin-top: 8px !important;
+}
+
+.glossary-section h4 {
+    font-size: var(--font-size-heading5);
+    color: var(--eclipse-11);
+    margin-bottom: 4px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.glossary-section .description {
+    font-size: var(--font-size-subtitle);
+    line-height: 1.5;
+    color: var(--eclipse-8);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--eclipse-3);
+}
+
+.glossary-section p {
+    font-size: var(--font-size-body);
+    color: var(--eclipse-9);
+    margin: 8px 0 16px;
+    font-weight: 500;
+}
+
+/* Terms Grid Layout */
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.term-card {
+    background-color: var(--eclipse-0);
+    border: 1px solid var(--eclipse-2);
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: var(--font-size-body);
+    color: var(--eclipse-8);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.term-card:hover {
+    background-color: var(--eclipse-2);
+    transform: translateY(-2px);
+    color: var(--eclipse-11);
+    border-color: var(--eclipse-3);
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: var(--font-size-caption);
+    font-weight: 600;
+    color: var(--eclipse-11);
+    transition: transform 0.2s ease;
+}
+
+.nav-link:hover {
+    transform: translateX(-4px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1280px) {
+    .terms-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .terms-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .terms-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
